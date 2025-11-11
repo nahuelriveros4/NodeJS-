@@ -1,0 +1,43 @@
+### REcuperar todas las peliculas
+
+GET http://localhost:1234/movies
+
+### Recuperar una pelicula por ID
+GET http://localhost:1234/movies/1e6b0a47-b90e-11f0-8228-0a002700000c
+
+### Recuperar todas las peliculas por genero
+
+GET http://localhost:1234/movies?genre=ACTION
+
+### Crear una Pelicula con POST
+
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+  {
+    "sql": "SELECT * FROM users",
+    "tittle": "Pulp Fiction",
+    "year": 1994,
+    "director": "Nahuel Riveros5s",
+    "duration": 154,
+    "poster": "https://www.themoviedb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+    "genre": [
+      "Crime",
+      "Drama"
+    ]
+  }
+
+### Actualizar una pelicula
+
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+  {
+    "year": 2024
+  }  
+
+
+### Eliminar una pelicula 
+DELETE http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3  
+
+
